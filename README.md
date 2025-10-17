@@ -24,10 +24,10 @@ It covers cloning the repo, setting up SSH keys, working with Jupyter Notebooks 
 
 ## 1) Generate & Add an SSH Key (One-Time Setup)
 
-1. **Check if you already have a key**  
-   ```bash
-   ls -al ~/.ssh
-   ```
+Check if you already have a key 
+```
+ls -al ~/.ssh
+```
 
 If you see id_rsa.pub, id_ed25519.pub, or similar, you may already have a key.
 
