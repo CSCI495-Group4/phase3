@@ -8,26 +8,33 @@ It covers cloning the repo, setting up SSH keys, working with Jupyter Notebooks 
 ## 📌 Repo URL
 
 **SSH Clone URL:**  
-```bash
-git@github.com:CSCI495-Group4/phase3.git
-```
+`git@github.com:CSCI495-Group4/phase3.git`
 
+---
+
+## 0) Prerequisites
+
+- [Git](https://git-scm.com/) installed (`git --version`)
+- SSH key set up with GitHub (instructions below)
+- Editor of your choice:
+  - **Jupyter Notebook / JupyterLab** or **VS Code with Jupyter extension** (for `.ipynb`)
+  - Any Python IDE/editor (for `.py`)
+
+---
 
 ## 1) Generate & Add an SSH Key (One-Time Setup)
 
-Check if you already have a key
+1. **Check if you already have a key**  
+   ```bash
+   ls -al ~/.ssh
 
-```
-ls -al ~/.ssh
-```
 
 If you see id_rsa.pub, id_ed25519.pub, or similar, you may already have a key.
 
 Generate a new key (if needed)
 
-```
 ssh-keygen -t ed25519 -C "your_email@example.com"
-```
+
 
 Press Enter to save to default path (~/.ssh/id_ed25519)
 
@@ -35,24 +42,22 @@ Optionally set a passphrase (or leave blank)
 
 Start SSH agent and add key
 
-```
 eval "$(ssh-agent -s)"
 ssh-add ~/.ssh/id_ed25519
-```
+
 
 Add public key to GitHub
 
-```
 cat ~/.ssh/id_ed25519.pub
-```
+
 
 Copy the output.
 On GitHub: Settings → SSH and GPG Keys → New SSH Key → Paste → Save
 
 Test connection
-```
+
 ssh -T git@github.com
-```
+
 
 Should return:
 
@@ -260,8 +265,3 @@ feat: add ResNet18 baseline
 fix: resolve DataLoader shuffle bug
 
 docs: update README with SSH key setup
-
-
----
-
-Do you want me to also make a **short "Quickstart Checklist" at the very top** (like 5 steps fo
