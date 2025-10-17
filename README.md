@@ -13,19 +13,21 @@ git@github.com:CSCI495-Group4/phase3.git
 ```
 
 
-##1) Generate & Add an SSH Key (One-Time Setup)
+## 1) Generate & Add an SSH Key (One-Time Setup)
 
 Check if you already have a key
 
+```
 ls -al ~/.ssh
-
+```
 
 If you see id_rsa.pub, id_ed25519.pub, or similar, you may already have a key.
 
 Generate a new key (if needed)
 
+```
 ssh-keygen -t ed25519 -C "your_email@example.com"
-
+```
 
 Press Enter to save to default path (~/.ssh/id_ed25519)
 
@@ -33,22 +35,24 @@ Optionally set a passphrase (or leave blank)
 
 Start SSH agent and add key
 
+```
 eval "$(ssh-agent -s)"
 ssh-add ~/.ssh/id_ed25519
-
+```
 
 Add public key to GitHub
 
+```
 cat ~/.ssh/id_ed25519.pub
-
+```
 
 Copy the output.
 On GitHub: Settings → SSH and GPG Keys → New SSH Key → Paste → Save
 
 Test connection
-
+```
 ssh -T git@github.com
-
+```
 
 Should return:
 
