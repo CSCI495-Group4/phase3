@@ -12,7 +12,8 @@ It covers cloning the repo, setting up SSH keys, working with Jupyter Notebooks 
 git@github.com:CSCI495-Group4/phase3.git
 ```
 
-1) Generate & Add an SSH Key (One-Time Setup)
+
+##1) Generate & Add an SSH Key (One-Time Setup)
 
 Check if you already have a key
 
