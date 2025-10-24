@@ -1,0 +1,35 @@
+# Core PyTorch packages
+torch>=2.0.0
+torchvision>=0.15.0
+
+# Computer Vision and Image Processing
+timm>=0.9.0
+
+# Data Science and Analysis
+pandas>=1.5.0
+numpy>=1.21.0
+datasets>=4.0.0
+kaggle>=1.5.12
+kagglehub>=0.1.0
+kagglehub[pandas-datasets]>=0.1.0
+# Progress bars and utilities
+tqdm>=4.64.0
+
+# Jupyter notebook support
+jupyter>=1.0.0
+ipykernel>=6.0.0
+
+# Additional utilities
+Pillow>=9.0.0
+matplotlib>=3.5.0
+seaborn>=0.11.0
+pyarrow>=10.0.0
+
+# Optional: For better performance
+# Uncomment if you have CUDA-compatible GPU
+# torch-audio>=2.0.0
+
+
+
+
+
